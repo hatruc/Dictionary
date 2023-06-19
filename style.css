@@ -1,0 +1,157 @@
+header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, .1);
+}
+
+.navbar-nav {
+    width: 100%;
+}
+
+.navbar-brand{
+    margin-right: -4rem;
+}
+
+.nav-item {
+    width: 33.33%;
+    text-align: center;
+}
+
+.navbar-nav .nav-link.active{
+    color:#00BFFF
+}
+
+.search {
+    position: relative;
+    margin: 35px 0 18px;
+}
+
+.search input {
+    height: 53px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 0 42px;
+    border: 1px solid #999;
+}
+
+.search input:focus {
+    padding: 0 41px;
+    border: 2px solid #999;
+}
+
+.search input::placeholder {
+    color: #B8B8B8;
+}
+
+.search-button{
+    text-align: center;
+}
+
+.search :where(i, span) {
+    position: absolute;
+    top: 50%;
+    color: #999;
+    transform: translateY(-50%);
+}
+
+.search i {
+    left: 18px;
+    pointer-events: none;
+    font-size: 16px;
+}
+
+.search input:focus~i {
+    color: black;
+}
+
+.search span {
+    right: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    display: none;
+}
+
+.search input:valid~span {
+    display: block;
+}
+
+.loading{
+    position: relative;
+    top: 20vh;
+}
+
+#loading-icon {
+    width: 2rem;
+    height: 2rem;
+    border: 5px solid #f3f3f3;
+    border-top: 6px solid #3366FF;
+    border-radius: 100%;
+    margin: auto;
+    visibility: hidden;
+    animation: spin 1s infinite linear;
+}
+
+.loading, #loading-icon.display {
+    visibility: visible;
+}
+
+#loading-text{
+    text-align: center;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.container{
+    background-color: rgba(0, 0, 0, .03);
+    min-height: 500px;
+}
+
+.container ol li {
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D9D9D9;
+    word-wrap: break-word;
+}
+
+.result-word{
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: #3366FF;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.container li span {
+    font-size: 15px;
+    color: #33CC66;
+}
+
+ul li:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+@media (min-width: 576px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+    }
+
+    .navbar-expand-lg .navbar-toggler {
+        display: none;
+    }
+}
